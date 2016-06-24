@@ -27,13 +27,14 @@
     	</div>
     	<div class="media-body">
     		<div class="lv-title" component="topic/header">
-    			<strong><i component="topic/pinned" class="fa fa-thumb-tack <!-- IF !topics.pinned -->hide<!-- ENDIF !topics.pinned -->"></i>
-				<i component="topic/locked" class="fa fa-lock <!-- IF !topics.locked -->hide<!-- ENDIF !topics.locked -->"></i></strong>
+    			
 				<!-- IF !topics.noAnchor -->
 				<a href="{config.relative_path}/topic/{topics.slug}<!-- IF topics.bookmark -->/{topics.bookmark}<!-- ENDIF topics.bookmark -->"><span class="topic-title">{topics.title}</span></a>
 				<!-- ELSE -->
 				<span class="topic-title">{topics.title}</span>
 				<!-- ENDIF !topics.noAnchor -->
+					<strong><i component="topic/pinned" class="label label-warning <!-- IF !topics.pinned -->hide<!-- ENDIF !topics.pinned -->">置顶</i>
+                				<i component="topic/locked" class="fa fa-lock <!-- IF !topics.locked -->hide<!-- ENDIF !topics.locked -->"></i></strong>
 			</div>
 
 			<!-- IF template.category -->

@@ -6,16 +6,16 @@
 				<div class="listview lv-lg">
 					<div class="lv-header-alt" component="post/header" itemprop="name">
 						<div class="title">
-							<i class="fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span class="topic-title" component="topic/title">{title}</span>
+							<i class="label label-warning <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->">置顶</i> <i class="fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span class="topic-title" component="topic/title">{title}</span>
 							<ul class="lv-actions actions">
 								<!-- IMPORT partials/topic/sort.tpl -->
 								<li>
 								    <span component="topic/follow" class="<!-- IF isFollowing -->hidden<!-- ENDIF isFollowing -->">
-										<i class="fa fa-eye"></i>
+										<i class="fa fa-eye-slash"></i>
 									</span>
 
 									<span component="topic/unfollow" class="<!-- IF !isFollowing -->hidden<!-- ENDIF !isFollowing -->">
-										<i class="fa fa-eye-slash"></i>
+										<i class="fa fa-eye"></i>
 									</span>
 								</li>
 							</ul>
